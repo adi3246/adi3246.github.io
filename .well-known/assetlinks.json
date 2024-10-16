@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.isa.applink",
+    "package_name": "my.airo.dev",
     "sha256_cert_fingerprints":
     ["C2:3A:6B:6B:F6:B6:D0:16:A1:F2:CE:44:2C:1E:0F:71:00:60:B1:98:31:10:BE:CC:5A:E2:B1:F3:D5:16:45:E7"]
   }
