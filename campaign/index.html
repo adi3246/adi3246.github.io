@@ -9,6 +9,28 @@
         var appLink = "https://adi3246.github.io/campaign?ref_code=wjj231";
         var playStoreLink = "https://play.google.com/store/apps/details?id=my.airo";
 
+        // Try to open the app
+        window.location.href = appLink;
+
+        // After a short delay, redirect to Play Store if the app isn't installed
+        setTimeout(function() {
+            window.location.href = playStoreLink;
+        }, 2000);  // Adjust the delay as needed
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Open My App</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Define the custom scheme deep link for your app
+        var appLink = "https://adi3246.github.io/campaign?ref_code=wjj231";
+        var playStoreLink = "https://play.google.com/store/apps/details?id=my.airo";
+
         // Create a hidden iframe to attempt to open the app
         var iframe = document.createElement('iframe');
         iframe.style.display = 'none';
@@ -21,4 +43,4 @@
         }, 1500);  // Adjust the delay as needed
     </script>
 </body>
-</html>
+</html> -->
