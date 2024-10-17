@@ -43,8 +43,11 @@
 </head>
 <body>
     <script type="text/javascript">
+        // Referrer URL: utm_source=google&utm_medium=cpc&utm_campaign=summer_sale
         var appLink = "";
-        var playStoreLink = "https://play.google.com/store/apps/details?id=my.airo";
+        var playStoreLink = "https://play.google.com/store/apps/details?id=my.airo&referrer=ref_code%3Dref123%26promo_code%3Dpromo123";
+
+        https://play.google.com/store/apps/details?id=your.package.name&referrer=utm_source%3Dtest_source%26utm_medium%3Dtest_medium
 
         // Create a hidden iframe to attempt to open the app
         var iframe = document.createElement('iframe');
