@@ -51,7 +51,9 @@
         iframe.src = appLink;
         document.body.appendChild(iframe);
 
-        window.location.href = playStoreLink;
+        setTimeout(function() {
+            window.location.href = playStoreLink;
+        }, 2000);
     </script>
 </body>
 </html>
