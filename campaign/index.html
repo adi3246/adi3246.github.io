@@ -43,6 +43,8 @@
 </head>
 <body>
     <script type="text/javascript">
+        // Define the custom scheme deep link for your app
+        var appLink = "https://adi3246.github.io/campaign?ref_code=wjj231";
         var playStoreLink = "https://play.google.com/store/apps/details?id=my.airo";
 
         // Create a hidden iframe to attempt to open the app
@@ -51,9 +53,10 @@
         iframe.src = appLink;
         document.body.appendChild(iframe);
 
+        // After a short delay, redirect to Play Store if the app isn't installed
         setTimeout(function() {
             window.location.href = playStoreLink;
-        }, 2000);
+        }, 1500);  // Adjust the delay as needed
     </script>
 </body>
 </html>
