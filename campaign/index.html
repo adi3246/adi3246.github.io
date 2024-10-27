@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Open My App</title>
@@ -21,5 +21,43 @@
             window.location.href = playStoreLink;
         }, 1500);  // Adjust the delay as needed
     </script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to App Store</title>
+    <script>
+        // URLs for the app in the respective stores
+        const iosAppStoreURL = "https://apps.apple.com/us/app/airo-investment-manager/id1518165366";
+        const androidPlayStoreURL = "https://play.google.com/store/apps/details?id=my.airo&referrer=airo_code%3Dref123";
+
+        // Function to check the device and redirect to the appropriate store
+        function redirectToAppStore() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                // Redirect to Google Play Store if the device is Android
+                window.location.href = androidPlayStoreURL;
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Redirect to Apple App Store if the device is iOS
+                window.location.href = iosAppStoreURL;
+            } else {
+                // Optional: Fallback URL for other platforms (e.g., a landing page)
+                window.location.href = "https://www.airo.my";
+            }
+        }
+
+        // Call the function on page load
+        window.onload = redirectToAppStore;
+    </script>
+</head>
+<body>
+    <h1>Redirecting to App Store...</h1>
+    <p>If you're not redirected automatically, <a href="javascript:void(0);" onclick="redirectToAppStore();">click here</a>.</p>
 </body>
 </html>
