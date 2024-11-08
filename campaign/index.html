@@ -8,13 +8,17 @@
         // URLs for the app in the respective stores
         const iosAppStoreURL = "https://apps.apple.com/us/app/airo-investment-manager/id1518165366";
         const androidPlayStoreURL = "https://play.google.com/store/apps/details?id=my.airo&referrer=airo_code%3Dref123";
+        const huaweiAppGalleryURL = "https://appgallery.huawei.com/app/C104703467";
 
         // Function to check the device and redirect to the appropriate store
         function redirectToAppStore() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            if (/android/i.test(userAgent)) {
-                // Redirect to Google Play Store if the device is Android
+            if (/huawei/i.test(userAgent) || /honor/i.test(userAgent)) {
+                // Redirect to Huawei AppGallery if the device is Huawei or Honor
+                window.location.href = huaweiAppGalleryURL;
+            } else if (/android/i.test(userAgent)) {
+                // Redirect to Google Play Store if the device is Android (non-Huawei)
                 window.location.href = androidPlayStoreURL;
             } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 // Redirect to Apple App Store if the device is iOS
