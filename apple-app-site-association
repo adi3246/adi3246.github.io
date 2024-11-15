@@ -1,0 +1,16 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "QNV4UNN5DQ.my.airo" ],
+             "components": [
+               {
+                  "/": "/a/r/paymentGateway/fpx/*",
+                  "comment": "Access for payment gateway FPX related links."
+               }
+             ],
+             "paths": [ "/campaign*" ]
+           }
+       ]
+   }
+}
