@@ -1,39 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirect to App Store</title>
 <script>
+    const iosAppStoreURL = "https://apps.apple.com/us/app/airo-investment-manager/id1518165366";
+    const androidPlayStoreURL = "https://play.google.com/store/apps/details?id=my.airo&referrer=airo_code%3Dref123";
+    const huaweiAppGalleryURL = "https://appgallery.huawei.com/app/C104703467";
 
-function getParam(name) {
-  const url = new URL(window.location.href);
-  return url.searchParams.get(name);
-}
+    function redirectToAppStore() {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
 
-const ref = getParam("ref_code") || "";
+        if (/huawei/i.test(ua) || /honor/i.test(ua)) {
+            window.location.href = huaweiAppGalleryURL;
+        } else if (/android/i.test(ua)) {
+            window.location.href = androidPlayStoreURL;
+        } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+            window.location.href = iosAppStoreURL;
+        } else {
+            window.location.href = "https://www.airo.my";
+        }
+    }
 
-const androidApp = "airo://campaign?ref_code=" + ref;
-const playStore = "https://play.google.com/store/apps/details?id=my.airo&referrer=airo_code%3D" + ref;
-const iosStore = "https://apps.apple.com/us/app/airo-investment-manager/id1518165366";
-
-function openApp(){
-
-  const userAgent = navigator.userAgent || navigator.vendor;
-
-  if (/android/i.test(userAgent)) {
-
-    window.location = androidApp;
-
-    setTimeout(function(){
-        window.location = playStore;
-    }, 2000);
-
-  }
-  else if (/iPad|iPhone|iPod/.test(userAgent)) {
-
-    window.location = iosStore;
-
-  } 
-  else {
-    window.location = "https://www.airo.my";
-  }
-}
-
-window.onload = openApp;
-
+    window.onload = redirectToAppStore;
 </script>
+</head>
+<body>
+<h1>Redirecting to App Store...</h1>
+<p>If you're not redirected automatically, <a href="javascript:void(0);" onclick="redirectToAppStore();">click here</a>.</p>
+</body>
+</html>
