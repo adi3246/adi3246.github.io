@@ -6,9 +6,13 @@
         "appID": "QNV4UNN5DQ.my.airo",
         "paths": [
           "/campaign*",
-          "/deposit*"
+          "/deposit"
         ]
       }
-    ]
+    ],
+    "substitutionVariables": {},
+    "defaults": {
+      "caseSensitive": false
+    }
   }
 }
