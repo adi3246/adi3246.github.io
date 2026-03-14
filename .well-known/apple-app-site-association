@@ -4,7 +4,10 @@
     "details": [
       {
         "appID": "QNV4UNN5DQ.my.airo",
-        "paths": [ "/campaign*" ]
+        "paths": [
+          "/campaign*",
+          "/deposit*"
+        ]
       }
     ]
   }
