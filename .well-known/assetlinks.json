@@ -2,8 +2,8 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "my.airo.dev",
+    "package_name": "my.airo",
     "sha256_cert_fingerprints":
-    ["F5:A6:AF:63:FD:DC:72:C6:FF:CE:BD:3E:E4:4E:76:07:75:08:FD:C6:EE:4D:46:F0:51:E5:7D:06:E3:D7:7C:F5"]
+    ["8E:BB:7D:09:7E:1F:5B:59:BA:3C:AF:79:A1:B3:46:49:10:13:8E:C4:7D:A3:A4:86:7B:A3:40:0B:64:34:F1:B6"]
   }
 }]
